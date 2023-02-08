@@ -1,13 +1,165 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+ul, ol {
+  list-style: none;
+}
+
+._container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/*-----Header-------*/
+
+header {
+  min-height: 70px;
+  background-color: rgb(129, 129, 205);
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  justify-content: space-between;
+}
+
+.header__logo {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__list > *:not(:last-child) {
+  margin: 0 0.5rem 0 0;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__link {
+  font-size: 1rem;
+  color: white;
+  padding: 0.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.5rem;
+  transition: 0.2s linear;
+}
+
+.header__link:hover {
+  background-color: white;
+  color:rgb(129, 129, 205);
+  transition: 0.2s linear;
+}
+
+.header__basket {
+  position: absolute;
+  top: 1px;
+  right: -15px;
+  color: white;
+  border-radius: 50%;
+  background-color: rgb(69, 69, 111);
+  padding: 4px 8px;
+  font-size: 0.7rem;
+}
+
+
+
+/*------Products------*/
+
+.products__list {
+  padding: 3rem 0;
+}
+
+.products__list > *:not(:last-child) {
+  margin:  0 0 1rem 0;
+}
+
+.products__item {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1rem;
+  border: 2px solid rgb(213, 209, 209);
+  padding: 0.5rem;
+}
+
+.products__item > *:not(:last-child) {
+  margin: 0 1rem 0 0;
+}
+
+.products__img {
+  max-width: 150px;
+}
+
+.products__img img {
+  width: 100%;
+}
+
+.products__text {
+  max-width: 500px;
+}
+
+.products__text > *:not(:last-child) {
+  margin: 0 0 1rem 0;
+}
+
+.products__price-btn > *:not(:last-child) {
+  margin: 0 0 1rem 0;
+}
+
+.products__price {
+  font-weight: 700;
+}
+
+.products__buy {
+  outline: none;
+  border: 1px solid rgb(129, 129, 205);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color:rgb(129, 129, 205);
+  transition: .2s linear;
+  cursor: pointer;
+  width: 100%;
+}
+
+.products__buy:hover {
+  background-color: rgb(129, 129, 205);
+  color: white;
+  transition: .2s linear;
+}
+
+/*--------Basket---------*/
+
+
+.basket__list {
+  padding: 3rem 0;
+}
+
+.basket__list > *:not(:last-child) {
+  margin:  0 0 1rem 0;
+}
+
+.basket__title {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 0 0 ;
+  color:rgb(122, 122, 122)
 }
